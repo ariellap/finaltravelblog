@@ -1,0 +1,356 @@
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+    position: relative;
+}
+
+body{
+    background-color:#B0C7BD; 
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 2em;
+    line-height: 1;
+    padding: 50px 0;
+    font-family: "Century-Gothic", sans-serif;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.5em;
+    padding: 10px 0;
+    line-height: 1.5;
+    font-family: "Century-Gothic", sans-serif;
+    text-align: center;
+}
+
+h3{
+    padding: 10px;
+}
+.grow:hover{
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+.nav_item a{
+    text-decoration: none;
+}
+
+/* .navigation{
+    list-style-type: none;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 3px;
+    justify-content: center;
+    text-align: center;
+
+} */
+
+.navigation{
+    list-style-type: none;
+}
+
+.nav_item{
+    /* display:block; */
+    padding-right: 20px;
+    width: 10em;
+    align-items: center;
+}
+
+header{
+    background-color: #ddd;
+    color: #33313A;
+    padding: 25px 10px;
+    text-align: left;
+    font-family: Cambria, serif;
+}
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.nav_item a{
+    color: #33313A;
+}
+
+.nav_item a:visited{
+    color: #33313A;
+}
+
+.nav_item:hover, .nav_item:focus, .nav_item:active{
+    text-transform: uppercase;
+    background-color: #C1AAC0;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.current{
+    text-transform: uppercase;
+    background-color: #C1AAC0;
+    padding: 5px 0px;
+
+}
+
+header p{
+    color: white;
+    font-size: 24px;
+    padding: 0 100px;
+    text-align: center;
+}
+
+/* nav:focus{
+    text-transform: uppercase;
+    border: 2px solid black;
+
+} */
+
+.parallax{
+    background-image: url(../images/palmtrees.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:lavender;
+    height: 18vw;
+}
+
+p{
+    padding: 1em;
+    text-align: center;
+    font-family: Cambria, serif;
+    display: inline-block;
+}
+
+.caption{
+    font-size:0.8em;
+}
+
+img{
+    display: block;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0px;
+
+}
+
+/* .aus-image img{
+    display: block;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+} */
+
+.eurogrid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+footer{
+    background-color: #ddd;
+    color: #544E61;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    /* next lines added to keep footer position at the bottom of the viewport */
+    bottom: 0;
+    position:fixed;
+    width: 100%; 
+}
+
+
+.skip a{
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+}
+
+.skip a:focus{
+    top: 0;
+    left: 0;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 15px; /* Some padding */ 
+    border: 1px solid black; /* Gray border */
+    border-radius: 5px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 5px; /* Add a top margin */
+    margin-bottom: 15px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #C1AAC0;
+    color: white;
+    padding:20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color:#C1AAC0;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .form {
+    border-radius: 5px;
+    background-color: #B0C7BD;
+    padding: 20px;
+  }
+
+  
+  .post-wrap {
+    width: 30vw;
+    height: 30vw;
+    perspective: 1000px;
+    margin: 30px;
+ }
+
+ .post {
+    position: relative; /* Required to absolutely position the child faces */
+    width: 100%;
+    height: 100%;
+ }
+
+ .post-front, .post-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #C1AAC0;
+ }
+ .post-back {
+    transform: rotateY(180deg);
+ }
+
+ .post-front, .post-back {
+    /* Existing styles here */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+ }
+
+ .post-wrap:hover .post {
+    transform: rotateY(180deg);
+ }
+
+ .post {
+    /* Existing styles here */
+    transition: transform 1s;
+    transform-style: preserve-3d;   
+ }
+
+ .flipcards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+ .flipcards img{
+    max-width: 100%;
+ }
+/* for reduced motion */
+@media screen and (prefers-reduced-motion: reduce) {
+    /* turn off scroll */
+    html{
+        scroll-behavior: auto;
+    }
+
+    /* turns off transition */
+
+    /* .skip a{
+        -webkit-transition: initial;
+        transition: initial;
+    } */
+
+    /* header{
+        background-attachment: initial;
+    } */ 
+    /* turns off parallax image, hasn't been setup yet so it's not linked to header  */
+
+}
+
+@media screen and (min-width: 800px){
+    .eurogrid{
+        display: grid;
+        grid-template-columns:2fr 2fr;
+    }
+
+    nav{
+        justify-content: center;
+        width: auto;
+    }
+
+    .navigation{
+        justify-content: center;
+        flex-flow: row;
+        text-align: center;
+    }
+
+    .americas{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-auto-rows: 2fr;
+        grid-row-gap: 10px;
+        height: fit-content;
+    }
+    
+    .dominicanpic{
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+    }
+    
+}   
+
+    /* .americas:nth-child(1n){
+        grid-column: 2/ span 1;
+    }
+
+    /* .americas:nth-child(even){
+        grid-row: 2 / span 1;
+    } */
+
+
+@media screen and (min-width: 1200px) {
+
+    .navigation{
+        justify-content: space-between;
+    }
+    .nav_item{
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .flipcards{
+        flex-wrap: nowrap;
+        justify-content: center;
+     }
+     .eurogrid{
+        display: grid;
+        grid-template-columns:2fr 2fr 2fr;
+    }
+
+    .americas{
+        grid-template-columns: 2fr 2fr 3fr;
+        grid-auto-rows: 2fr;
+        grid-row-gap: 10px;
+    }
+}
