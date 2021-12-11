@@ -210,7 +210,7 @@ input[type=text], select, textarea {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #B0C7BD;
+    background-color: #ddd;
     border: 1px solid black;
     border-radius: 5px;
  }
